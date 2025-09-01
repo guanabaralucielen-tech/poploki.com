@@ -6,9 +6,10 @@
   <title>Blog Exemplo</title>
   <style>
     body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f9f9f9;color:#222;}
-    header{background:#003322;color:#fff;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;}
-    header .logo{font-size:22px;font-weight:bold;}
-    nav{display:flex;align-items:center;gap:20px;}
+    header{background:#003322;color:#fff;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+    header .logo{font-size:22px;font-weight:bold;display:flex;align-items:center;}
+    header .logo img{height:40px;margin-right:10px;}
+    nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
     nav a{color:#fff;text-decoration:none;font-size:15px;}
     .search{margin-left:20px;}
     .search input{padding:5px;border:none;border-radius:4px;}
@@ -23,21 +24,116 @@
     .card .readmore{font-size:14px;color:#0066cc;text-decoration:none;}
     footer{background:#222;color:#eee;padding:30px 20px;margin-top:40px;}
     .footer-wrap{max-width:1080px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
-    .footer-logo{font-size:20px;font-weight:bold;margin-bottom:10px;}
+    .footer-logo{font-size:20px;font-weight:bold;margin-bottom:10px;display:flex;align-items:center;}
+    .footer-logo img{height:30px;margin-right:10px;}
     .footer-col h4{margin-bottom:10px;color:#fff;}
     .footer-col ul{list-style:none;padding:0;margin:0;}
     .footer-col ul li{margin-bottom:6px;}
     .footer-col ul li a{color:#ccc;text-decoration:none;font-size:14px;}
     .footer-col ul li a:hover{color:#fff;}
     .copy{text-align:center;margin-top:20px;font-size:12px;color:#aaa;}
+    
+    /* Menu Mobile */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+    }
+    
+    .menu-toggle span {
+      height: 3px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+    
+    /* Media Queries para Responsividade */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+      }
+      
+      .menu-toggle {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+      }
+      
+      nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      
+      nav.active {
+        display: flex;
+      }
+      
+      .search {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 10px;
+      }
+      
+      .search input {
+        width: 100%;
+      }
+      
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-wrap {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      header .logo {
+        font-size: 18px;
+      }
+      
+      header .logo img {
+        height: 30px;
+      }
+      
+      .card .t {
+        font-size: 16px;
+      }
+      
+      .card .s {
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
 <body>
 
 <!-- Cabeçalho -->
 <header>
-  <div class="logo">BlogExemplo</div>
-  <nav>
+  <div class="logo">
+    <img src="Img/logo.png" alt="Logo Blog Exemplo">
+    BlogExemplo
+  </div>
+  
+  <div class="menu-toggle" id="mobile-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
+  <nav id="main-nav">
     <a href="#">Curiosidades</a>
     <a href="#">Curtas</a>
     <a href="#">Filmes</a>
@@ -90,7 +186,10 @@
 <footer>
   <div class="footer-wrap">
     <div>
-      <div class="footer-logo">BlogExemplo</div>
+      <div class="footer-logo">
+        <img src="Img/logo.png" alt="Logo Blog Exemplo">
+        BlogExemplo
+      </div>
       <p>Conteúdo de entretenimento e informação.</p>
     </div>
     <div class="footer-col">
@@ -115,7 +214,12 @@
   <div class="copy">© 2025 BlogExemplo — Todos os direitos reservados</div>
 </footer>
 
+<script>
+  // Menu mobile toggle
+  document.getElementById('mobile-menu').addEventListener('click', function() {
+    document.getElementById('main-nav').classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
-
-
