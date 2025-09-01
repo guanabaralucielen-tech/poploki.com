@@ -4,16 +4,118 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blog Exemplo</title>
-  <link rel="stylesheet" href="css/estilo.css">
+  <style>
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f9f9f9;color:#222;}
+    header{background:#003322;color:#fff;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;}
+    header .logo{font-size:22px;font-weight:bold;}
+    nav{display:flex;align-items:center;gap:20px;}
+    nav a{color:#fff;text-decoration:none;font-size:15px;}
+    .search{margin-left:20px;}
+    .search input{padding:5px;border:none;border-radius:4px;}
+    .wrap{max-width:1080px;margin:20px auto;padding:0 16px;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+    .card{background:#fff;border:1px solid #ddd;border-radius:6px;overflow:hidden;display:block;text-decoration:none;color:#222;transition:0.2s;}
+    .card:hover{box-shadow:0 2px 8px rgba(0,0,0,0.15);}
+    .card img{width:100%;height:180px;object-fit:cover;}
+    .card .p{padding:12px;}
+    .card .t{font-size:18px;font-weight:700;margin-bottom:6px;}
+    .card .s{color:#555;font-size:14px;margin-bottom:10px;}
+    .card .readmore{font-size:14px;color:#0066cc;text-decoration:none;}
+    footer{background:#222;color:#eee;padding:30px 20px;margin-top:40px;}
+    .footer-wrap{max-width:1080px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
+    .footer-logo{font-size:20px;font-weight:bold;margin-bottom:10px;}
+    .footer-col h4{margin-bottom:10px;color:#fff;}
+    .footer-col ul{list-style:none;padding:0;margin:0;}
+    .footer-col ul li{margin-bottom:6px;}
+    .footer-col ul li a{color:#ccc;text-decoration:none;font-size:14px;}
+    .footer-col ul li a:hover{color:#fff;}
+    .copy{text-align:center;margin-top:20px;font-size:12px;color:#aaa;}
+  </style>
 </head>
 <body>
-<header><div class="logo">BlogExemplo</div></header>
+
+<!-- Cabeçalho -->
+<header>
+  <div class="logo">BlogExemplo</div>
+  <nav>
+    <a href="#">Curiosidades</a>
+    <a href="#">Curtas</a>
+    <a href="#">Filmes</a>
+    <a href="#">Séries</a>
+    <div class="search">
+      <input type="text" placeholder="Pesquisar...">
+    </div>
+  </nav>
+</header>
+
+<!-- Conteúdo principal -->
 <div class="wrap">
   <div class="grid">
-    <a class="card" href="artigo1.html"><img src="imagens/capa1.jpg" alt=""><div class="p"><div class="t">Rugas Nunca Mais</div><div class="s">Dê adeus às marcas do tempo</div><span class="readmore">Leia mais »</span></div></a>
-    <a class="card" href="artigo2.html"><img src="imagens/capa2.jpg" alt=""><div class="p"><div class="t">Revolução 5G</div><div class="s">Conheça o futuro da internet</div><span class="readmore">Leia mais »</span></div></a>
+    <a class="card" href="artigo1.html">
+      <img src="https://picsum.photos/600/400?random=1" alt="">
+      <div class="p">
+        <div class="t">Rugas Nunca Mais: Pele Jovem!</div>
+        <div class="s">Descubra como suavizar linhas de expressão e recuperar uma aparência mais jovem.</div>
+        <span class="readmore">Leia mais »</span>
+      </div>
+    </a>
+    <a class="card" href="artigo2.html">
+      <img src="https://picsum.photos/600/400?random=2" alt="">
+      <div class="p">
+        <div class="t">Entre na Era 5G Agora</div>
+        <div class="s">A tecnologia 5G já está ao alcance das suas mãos com internet ultrarrápida.</div>
+        <span class="readmore">Leia mais »</span>
+      </div>
+    </a>
+    <a class="card" href="artigo3.html">
+      <img src="https://picsum.photos/600/400?random=3" alt="">
+      <div class="p">
+        <div class="t">Benefícios do Café Especial</div>
+        <div class="s">Descubra como o café pode melhorar energia, foco e até mesmo sua saúde.</div>
+        <span class="readmore">Leia mais »</span>
+      </div>
+    </a>
+    <a class="card" href="artigo4.html">
+      <img src="https://picsum.photos/600/400?random=4" alt="">
+      <div class="p">
+        <div class="t">Filmes que Marcaram Gerações</div>
+        <div class="s">Uma lista com clássicos do cinema que atravessaram décadas e emocionaram milhões.</div>
+        <span class="readmore">Leia mais »</span>
+      </div>
+    </a>
   </div>
 </div>
-<footer><div class="copy">© 2025 BlogExemplo</div></footer>
+
+<!-- Rodapé -->
+<footer>
+  <div class="footer-wrap">
+    <div>
+      <div class="footer-logo">BlogExemplo</div>
+      <p>Conteúdo de entretenimento e informação.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#">Curiosidades</a></li>
+        <li><a href="#">Curtas</a></li>
+        <li><a href="#">Filmes</a></li>
+        <li><a href="#">Séries</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Links Úteis</h4>
+      <ul>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">© 2025 BlogExemplo — Todos os direitos reservados</div>
+</footer>
+
 </body>
 </html>
+
+
