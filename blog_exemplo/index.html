@@ -3,35 +3,331 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog Exemplo</title>
+  <title>Blog InformaJá - Sua fonte de curiosidades e entretenimento</title>
+  <meta name="description" content="Descubra curiosidades, dicas de filmes, séries e muito mais no Blog InformaJá. Sua fonte de entretenimento e informação diária.">
   <style>
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f9f9f9;color:#222;}
-    header{background:#003322;color:#fff;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
-    header .logo{font-size:22px;font-weight:bold;display:flex;align-items:center;}
-    header .logo img{height:40px;margin-right:10px;}
-    nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
-    nav a{color:#fff;text-decoration:none;font-size:15px;}
-    .search{margin-left:20px;}
-    .search input{padding:5px;border:none;border-radius:4px;}
-    .wrap{max-width:1080px;margin:20px auto;padding:0 16px;}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
-    .card{background:#fff;border:1px solid #ddd;border-radius:6px;overflow:hidden;display:block;text-decoration:none;color:#222;transition:0.2s;}
-    .card:hover{box-shadow:0 2px 8px rgba(0,0,0,0.15);}
-    .card img{width:100%;height:180px;object-fit:cover;}
-    .card .p{padding:12px;}
-    .card .t{font-size:18px;font-weight:700;margin-bottom:6px;}
-    .card .s{color:#555;font-size:14px;margin-bottom:10px;}
-    .card .readmore{font-size:14px;color:#0066cc;text-decoration:none;}
-    footer{background:#222;color:#eee;padding:30px 20px;margin-top:40px;}
-    .footer-wrap{max-width:1080px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
-    .footer-logo{font-size:20px;font-weight:bold;margin-bottom:10px;display:flex;align-items:center;}
-    .footer-logo img{height:30px;margin-right:10px;}
-    .footer-col h4{margin-bottom:10px;color:#fff;}
-    .footer-col ul{list-style:none;padding:0;margin:0;}
-    .footer-col ul li{margin-bottom:6px;}
-    .footer-col ul li a{color:#ccc;text-decoration:none;font-size:14px;}
-    .footer-col ul li a:hover{color:#fff;}
-    .copy{text-align:center;margin-top:20px;font-size:12px;color:#aaa;}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      background: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: #003322;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    header .logo {
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    
+    header .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      transition: opacity 0.3s;
+      padding: 5px 0;
+      position: relative;
+    }
+    
+    nav a:hover {
+      opacity: 0.8;
+    }
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      transition: width 0.3s;
+    }
+    
+    nav a:hover::after {
+      width: 100%;
+    }
+    
+    .search {
+      margin-left: 20px;
+      position: relative;
+    }
+    
+    .search input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 20px;
+      width: 200px;
+      font-size: 14px;
+    }
+    
+    .search button {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .wrap {
+      max-width: 1080px;
+      margin: 20px auto;
+      padding: 0 16px;
+    }
+    
+    .page-title {
+      text-align: center;
+      margin: 30px 0;
+      color: #003322;
+      font-size: 32px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .page-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: #003322;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+      color: #222;
+      transition: 0.3s;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    
+    .card:hover img {
+      transform: scale(1.03);
+    }
+    
+    .card .p {
+      padding: 15px;
+    }
+    
+    .card .t {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #003322;
+    }
+    
+    .card .s {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    
+    .card .meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 10px;
+    }
+    
+    .card .readmore {
+      font-size: 14px;
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    
+    .newsletter {
+      background: #eef8f5;
+      border-radius: 8px;
+      padding: 30px;
+      margin: 40px 0;
+      text-align: center;
+    }
+    
+    .newsletter h3 {
+      color: #003322;
+      margin-bottom: 15px;
+    }
+    
+    .newsletter p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .newsletter-form input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+      font-size: 14px;
+    }
+    
+    .newsletter-form button {
+      background: #003322;
+      color: white;
+      border: none;
+      padding: 0 20px;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+    
+    footer {
+      background: #222;
+      color: #eee;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+    
+    .footer-wrap {
+      max-width: 1080px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+    
+    .footer-logo {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .footer-logo img {
+      height: 30px;
+      margin-right: 10px;
+    }
+    
+    .footer-col h4 {
+      margin-bottom: 15px;
+      color: #fff;
+      font-size: 18px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+    
+    .footer-col h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: #0066cc;
+    }
+    
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .footer-col ul li {
+      margin-bottom: 8px;
+    }
+    
+    .footer-col ul li a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+    
+    .footer-col ul li a:hover {
+      color: #fff;
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    
+    .social-icons a {
+      color: #fff;
+      background: #444;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+    
+    .social-icons a:hover {
+      background: #0066cc;
+    }
+    
+    .copy {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+      color: #aaa;
+      border-top: 1px solid #444;
+      padding-top: 20px;
+    }
     
     /* Menu Mobile */
     .menu-toggle {
@@ -97,6 +393,20 @@
         grid-template-columns: 1fr;
         gap: 25px;
       }
+      
+      .newsletter-form {
+        flex-direction: column;
+      }
+      
+      .newsletter-form input {
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      
+      .newsletter-form button {
+        border-radius: 4px;
+        padding: 12px;
+      }
     }
     
     @media (max-width: 480px) {
@@ -115,6 +425,10 @@
       .card .s {
         font-size: 13px;
       }
+      
+      .page-title {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
@@ -123,8 +437,8 @@
 <!-- Cabeçalho -->
 <header>
   <div class="logo">
-    <img src="Img/logo.png" alt="Logo Blog Exemplo">
-    BlogExemplo
+    <img src="Img/logo.png" alt="Logo Blog InformaJá">
+    InformaJá
   </div>
   
   <div class="menu-toggle" id="mobile-menu">
@@ -140,45 +454,73 @@
     <a href="#">Séries</a>
     <div class="search">
       <input type="text" placeholder="Pesquisar...">
+      <button>🔍</button>
     </div>
   </nav>
 </header>
 
 <!-- Conteúdo principal -->
 <div class="wrap">
+  <h1 class="page-title">Descubra Novidades Incríveis</h1>
+  
   <div class="grid">
     <a class="card" href="artigo1.html">
-      <img src="https://picsum.photos/600/400?random=1" alt="">
+      <img src="https://picsum.photos/600/400?random=1" alt="Mulher com pele rejuvenescida">
       <div class="p">
+        <div class="meta">
+          <span>Por: Dra. Carla Silva</span>
+          <span>12 de Maio, 2023</span>
+        </div>
         <div class="t">Rugas Nunca Mais: Pele Jovem!</div>
-        <div class="s">Descubra como suavizar linhas de expressão e recuperar uma aparência mais jovem.</div>
+        <div class="s">Descubra como suavizar linhas de expressão e recuperar uma aparência mais jovem com métodos naturais.</div>
         <span class="readmore">Leia mais »</span>
       </div>
     </a>
     <a class="card" href="artigo2.html">
-      <img src="https://picsum.photos/600/400?random=2" alt="">
+      <img src="https://picsum.photos/600/400?random=2" alt="Dispositivo 5G">
       <div class="p">
+        <div class="meta">
+          <span>Por: TechBlog</span>
+          <span>10 de Maio, 2023</span>
+        </div>
         <div class="t">Entre na Era 5G Agora</div>
-        <div class="s">A tecnologia 5G já está ao alcance das suas mãos com internet ultrarrápida.</div>
+        <div class="s">A tecnologia 5G já está ao alcance das suas mãos com internet ultrarrápida e baixa latência.</div>
         <span class="readmore">Leia mais »</span>
       </div>
     </a>
     <a class="card" href="artigo3.html">
-      <img src="https://picsum.photos/600/400?random=3" alt="">
+      <img src="https://picsum.photos/600/400?random=3" alt="Xícara de café especial">
       <div class="p">
+        <div class="meta">
+          <span>Por: Chef João Santos</span>
+          <span>8 de Maio, 2023</span>
+        </div>
         <div class="t">Benefícios do Café Especial</div>
-        <div class="s">Descubra como o café pode melhorar energia, foco e até mesmo sua saúde.</div>
+        <div class="s">Descubra como o café pode melhorar energia, foco e até mesmo sua saúde com seus antioxidantes.</div>
         <span class="readmore">Leia mais »</span>
       </div>
     </a>
     <a class="card" href="artigo4.html">
-      <img src="https://picsum.photos/600/400?random=4" alt="">
+      <img src="https://picsum.photos/600/400?random=4" alt="Cena de filme clássico">
       <div class="p">
+        <div class="meta">
+          <span>Por: Cinefilia</span>
+          <span>5 de Maio, 2023</span>
+        </div>
         <div class="t">Filmes que Marcaram Gerações</div>
-        <div class="s">Uma lista com clássicos do cinema que atravessaram décadas e emocionaram milhões.</div>
+        <div class="s">Uma lista com clássicos do cinema que atravessaram décadas e emocionaram milhões de pessoas.</div>
         <span class="readmore">Leia mais »</span>
       </div>
     </a>
+  </div>
+  
+  <div class="newsletter">
+    <h3>Assine Nossa Newsletter</h3>
+    <p>Receba as melhores dicas, curiosidades e novidades diretamente no seu e-mail.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Seu melhor e-mail" required>
+      <button type="submit">Assinar</button>
+    </form>
   </div>
 </div>
 
@@ -187,10 +529,16 @@
   <div class="footer-wrap">
     <div>
       <div class="footer-logo">
-        <img src="Img/logo.png" alt="Logo Blog Exemplo">
-        BlogExemplo
+        <img src="Img/logo.png" alt="Logo Blog InformaJá">
+        InformaJá
       </div>
-      <p>Conteúdo de entretenimento e informação.</p>
+      <p>Conteúdo de entretenimento e informação para o seu dia a dia.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">i</a>
+        <a href="#" aria-label="Twitter">t</a>
+        <a href="#" aria-label="YouTube">y</a>
+      </div>
     </div>
     <div class="footer-col">
       <h4>Navegação</h4>
@@ -210,14 +558,29 @@
         <li><a href="#">Termos de Uso</a></li>
       </ul>
     </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li>Email: contato@bloginformaja.com</li>
+        <li>Telefone: (11) 9999-8888</li>
+        <li>Endereço: Av. Paulista, 1000, São Paulo</li>
+      </ul>
+    </div>
   </div>
-  <div class="copy">© 2025 BlogExemplo — Todos os direitos reservados</div>
+  <div class="copy">© 2023 Blog InformaJá — Todos os direitos reservados</div>
 </footer>
 
 <script>
   // Menu mobile toggle
   document.getElementById('mobile-menu').addEventListener('click', function() {
     document.getElementById('main-nav').classList.toggle('active');
+  });
+  
+  // Newsletter form submission
+  document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Obrigado por assinar nossa newsletter! Em breve você receberá nossas novidades.');
+    this.reset();
   });
 </script>
 
