@@ -4,20 +4,171 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Título do Artigo — BlogExemplo</title>
-<link rel="stylesheet" href="css/estilo.css">
+<style>
+  body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f9f9f9;color:#222}
+  /* Header */
+  header{background:#003322;color:#fff;padding:15px 20px;display:flex;align-items:center;justify-content:space-between}
+  header .logo{font-size:22px;font-weight:700}
+  nav{display:flex;align-items:center;gap:20px}
+  nav a{color:#fff;text-decoration:none;font-size:15px}
+  .search input{padding:6px;border:none;border-radius:4px}
+  /* Container */
+  .wrap{max-width:980px;margin:22px auto;padding:0 16px}
+  /* Artigo */
+  article{background:#fff;border:1px solid #e6e6e6;border-radius:8px;padding:20px}
+  article h1{font-size:30px;margin:0 0 10px}
+  .meta{color:#666;font-size:13px;margin-bottom:10px}
+  .hero{width:100%;border-radius:8px;margin:12px 0}
+  article p{line-height:1.75;margin:14px 0}
+  /* Compartilhe */
+  .share{margin:22px 0;text-align:center}
+  .share h3{letter-spacing:.08em;font-size:14px;color:#333;margin-bottom:10px}
+  .share .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:8px;border:0;cursor:pointer;text-decoration:none;color:#fff;font-weight:600}
+  .btn.fb{background:#1877f2}
+  .btn.tw{background:#0f1419}
+  .btn.wa{background:#25d366;color:#083b1d}
+  /* Prev/Next */
+  .pn{display:flex;justify-content:space-between;align-items:center;margin:26px 0;color:#0066cc}
+  .pn a{color:#0066cc;text-decoration:none}
+  /* Veja Também */
+  .also h3{font-weight:700;margin:10px 0 12px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:#fff;border:1px solid #e6e6e6;border-radius:12px;overflow:hidden;text-decoration:none;color:#222;display:block}
+  .card img{width:100%;height:150px;object-fit:cover;display:block}
+  .chip{position:absolute;top:10px;left:10px;background:#0c5b44;color:#fff;font-size:12px;padding:4px 8px;border-radius:999px}
+  .thumb{position:relative}
+  .card .p{padding:12px;background:#ff6a00;color:#fff}
+  .card .t{font-weight:700}
+  /* Footer */
+  footer{background:#222;color:#eee;margin-top:36px;padding:30px 20px}
+  .footer-wrap{max-width:1080px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+  .footer-logo{font-size:20px;font-weight:700;margin-bottom:8px}
+  .footer-col h4{margin:0 0 10px}
+  .footer-col ul{list-style:none;margin:0;padding:0}
+  .footer-col li{margin:6px 0}
+  .footer-col a{color:#ccc;text-decoration:none;font-size:14px}
+  .footer-col a:hover{color:#fff}
+  .copy{text-align:center;margin-top:16px;color:#aaa;font-size:12px}
+</style>
 </head>
 <body>
-<header><div class="logo">BlogExemplo</div></header>
+
+<!-- Cabeçalho -->
+<header>
+  <div class="logo">BlogExemplo</div>
+  <nav>
+    <a href="index.html#curiosidades">Curiosidades</a>
+    <a href="index.html#curtas">Curtas</a>
+    <a href="index.html#filmes">Filmes</a>
+    <a href="index.html#series">Séries</a>
+    <div class="search"><input type="text" placeholder="Pesquisar..."></div>
+  </nav>
+</header>
+
+<!-- Artigo -->
 <div class="wrap">
   <article>
-    <h1>Rugas Nunca Mais: Futuro da Conectividade</h1>
-    <img class="hero" src="imagens/capa1.jpg" alt="">
-    <p>Texto de abertura do artigo. Explique o tema com objetividade.</p>
-    <p>Desenvolva os tópicos do conteúdo. Use parágrafos curtos e claros.</p>
-    <p>Conclua com um call to action leve ou indique leituras relacionadas.</p>
-    <a href="index.html">← Voltar</a>
+    <div class="meta">ALTA VELOCIDADE — Comunicação, Inovação</div>
+    <h1>Revolução 5G: Futuro da Conectividade</h1>
+    <img class="hero" src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="">
+    <p>Texto de abertura do artigo. Explique o tema com objetividade, intertítulos e imagens quando necessário.</p>
+    <p>Desenvolva os tópicos do conteúdo. Use parágrafos curtos e claros para facilitar a leitura em mobile.</p>
+    <p>Conclua com um call to action leve (se fizer sentido) ou indique leituras relacionadas.</p>
+
+    <!-- Compartilhe -->
+    <div class="share">
+      <h3>COMPARTILHE</h3>
+      <div class="row">
+        <a class="btn fb" id="share-fb" href="#" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn tw" id="share-tw" href="#" target="_blank" rel="noopener">Twitter</a>
+        <a class="btn wa" id="share-wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Anterior / Próximo -->
+    <div class="pn">
+      <div>Anterior<br><a href="artigo-anterior.html">Café Especial: Receita Deliciosa em Casa</a></div>
+      <div>Próximo<br><a href="artigo-proximo.html">Entre na Era 5G Agora</a></div>
+    </div>
+
+    <!-- Veja também -->
+    <div class="also">
+      <h3>VEJA TAMBÉM</h3>
+      <div class="grid">
+        <a class="card" href="artigo-curtas.html">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1542157585-ef20bfcce815?q=80&w=1200&auto=format&fit=crop" alt="">
+            <span class="chip">CURTAS</span>
+          </div>
+          <div class="p"><div class="t">Brilho dos jovens talentos: curtas premiados</div></div>
+        </a>
+        <a class="card" href="artigo-apps.html">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1548095115-45697e336193?q=80&w=1200&auto=format&fit=crop" alt="">
+            <span class="chip">APLICATIVOS</span>
+          </div>
+          <div class="p"><div class="t">Adicione filtros fofos ao pet em 30s</div></div>
+        </a>
+        <a class="card" href="artigo-series.html">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963f?q=80&w=1200&auto=format&fit=crop" alt="">
+            <span class="chip">SÉRIES</span>
+          </div>
+          <div class="p"><div class="t">Breaking Bad: Série incrível de verdade</div></div>
+        </a>
+      </div>
+    </div>
   </article>
 </div>
-<footer><div class="copy">© 2025 BlogExemplo</div></footer>
+
+<!-- Rodapé -->
+<footer>
+  <div class="footer-wrap">
+    <div>
+      <div class="footer-logo">BlogExemplo</div>
+      <p>Conteúdo de entretenimento e informação.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="index.html#curiosidades">Curiosidades</a></li>
+        <li><a href="index.html#curtas">Curtas</a></li>
+        <li><a href="index.html#filmes">Filmes</a></li>
+        <li><a href="index.html#series">Séries</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Links Úteis</h4>
+      <ul>
+        <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="termos.html">Termos de Uso</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">© 2025 BlogExemplo — Todos os direitos reservados</div>
+</footer>
+
+<!-- Script: gera links de compartilhamento com URL/Título atuais -->
+<script>
+(function(){
+  var url = encodeURIComponent(location.href);
+  var title = encodeURIComponent(document.title);
+
+  document.getElementById('share-fb').href =
+    'https://www.facebook.com/sharer/sharer.php?u=' + url;
+
+  document.getElementById('share-tw').href =
+    'https://twitter.com/intent/tweet?url=' + url + '&text=' + title;
+
+  document.getElementById('share-wa').href =
+    'https://wa.me/?text=' + title + '%20' + url;
+})();
+</script>
+
 </body>
 </html>
+
+
