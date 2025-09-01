@@ -1,2 +1,0 @@
-# poploki.com
-Blog
