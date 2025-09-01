@@ -38,6 +38,11 @@
       margin-right: 10px;
     }
     
+    header .logo a {
+      color: white;
+      text-decoration: none;
+    }
+    
     nav {
       display: flex;
       align-items: center;
@@ -126,6 +131,7 @@
       display: flex;
       align-items: center;
       gap: 15px;
+      flex-wrap: wrap;
     }
     
     .author {
@@ -540,6 +546,12 @@
         grid-template-columns: 1fr;
         gap: 25px;
       }
+      
+      .meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
     }
     
     @media (max-width: 480px) {
@@ -580,8 +592,8 @@
 <!-- Cabeçalho -->
 <header>
   <div class="logo">
-    <img src="Img/logo.png" alt="Logo Blog InformaJá">
-    InformaJá
+    <img src="../Img/logo.png" alt="Logo Blog InformaJá">
+    <a href="../index.html">InformaJá</a>
   </div>
   
   <div class="menu-toggle" id="mobile-menu">
@@ -591,10 +603,11 @@
   </div>
   
   <nav id="main-nav">
-    <a href="index.html#curiosidades">Curiosidades</a>
-    <a href="index.html#curtas">Curtas</a>
-    <a href="index.html#filmes">Filmes</a>
-    <a href="index.html#series">Séries</a>
+    <a href="../index.html">Início</a>
+    <a href="../index.html#curiosidades">Curiosidades</a>
+    <a href="../index.html#curtas">Curtas</a>
+    <a href="../index.html#filmes">Filmes</a>
+    <a href="../index.html#series">Séries</a>
     <div class="search">
       <input type="text" placeholder="Pesquisar...">
       <button>🔍</button>
@@ -622,7 +635,7 @@
     
     <h2>O que Torna o 5G Tão Especial?</h2>
     
-    <p>Diferente das gerações anteriores, o 5G não é apenas uma evolução incremental, mas uma mudança paradigmática na tecnologia de comunicação. Enquanto o 4G foi projetado principalmente para conectar pessoas, o 5G foi desenvolvido para conectar praticamente tudo - de dispositivos pessoais a sensores industriais, carros autônomos e sistemas de saúde remotos.</p>
+    <p>Diferente das gerações anteriores, o 5G não é apenas uma evolução incremental, mas uma mudança paradigmática na tecnologia de communication. Enquanto o 4G foi projetado principalmente para conectar pessoas, o 5G foi desenvolvido para conectar praticamente tudo - de dispositivos pessoais a sensores industriais, carros autônomos e sistemas de saúde remotos.</p>
     
     <blockquote>
       "O 5G representa muito mais do que simplesmente velocidades mais rápidas. É a fundação para uma sociedade verdadeiramente conectada e inteligente." - Especialista em Tecnologia
@@ -648,11 +661,11 @@
     <div class="pn">
       <div>
         <div class="label">Artigo anterior</div>
-        <a href="artigo-anterior.html">Café Especial: Receita Deliciosa em Casa</a>
+        <a href="beneficios-cafe.html">Benefícios do Café Especial para a Saúde</a>
       </div>
       <div style="text-align: right;">
         <div class="label">Próximo artigo</div>
-        <a href="artigo-proximo.html">Entre na Era 5G Agora: Guia Prático</a>
+        <a href="guia-5g.html">Entre na Era 5G Agora: Guia Prático</a>
       </div>
     </div>
 
@@ -660,7 +673,7 @@
     <div class="also">
       <h3>VEJA TAMBÉM</h3>
       <div class="grid">
-        <a class="card" href="artigo-curtas.html">
+        <a class="card" href="curtas-premiados.html">
           <div class="thumb">
             <img src="https://images.unsplash.com/photo-1542157585-ef20bfcce815?q=80&w=1200&auto=format&fit=crop" alt="Jovens talentos">
             <span class="chip">CURTAS</span>
@@ -670,7 +683,7 @@
             <div class="s">Descubra os novos cineastas que estão revolucionando a indústria cinematográfica.</div>
           </div>
         </a>
-        <a class="card" href="artigo-apps.html">
+        <a class="card" href="apps-pets.html">
           <div class="thumb">
             <img src="https://images.unsplash.com/photo-1548095115-45697e336193?q=80&w=1200&auto=format&fit=crop" alt="Aplicativos para pets">
             <span class="chip">APPS</span>
@@ -680,14 +693,14 @@
             <div class="s">Aplicativos divertidos para transformar as fotos do seu animal de estimação.</div>
           </div>
         </a>
-        <a class="card" href="artigo-series.html">
+        <a class="card" href="../index.html">
           <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963f?q=80&w=1200&auto=format&fit=crop" alt="Cena de Breaking Bad">
-            <span class="chip">SÉRIES</span>
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=600&auto=format&fit=crop" alt="Página inicial">
+            <span class="chip">INÍCIO</span>
           </div>
           <div class="p">
-            <div class="t">Breaking Bad: Série incrível de verdade</div>
-            <div class="s">Análise detalhada de uma das séries mais aclamadas da história da televisão.</div>
+            <div class="t">Voltar à Página Inicial</div>
+            <div class="s">Confira mais artigos interessantes em nossa página principal</div>
           </div>
         </a>
       </div>
@@ -700,7 +713,7 @@
   <div class="footer-wrap">
     <div>
       <div class="footer-logo">
-        <img src="Img/logo.png" alt="Logo Blog InformaJá">
+        <img src="../Img/logo.png" alt="Logo Blog InformaJá">
         InformaJá
       </div>
       <p>Conteúdo de entretenimento e informação para o seu dia a dia.</p>
@@ -714,19 +727,20 @@
     <div class="footer-col">
       <h4>Navegação</h4>
       <ul>
-        <li><a href="index.html#curiosidades">Curiosidades</a></li>
-        <li><a href="index.html#curtas">Curtas</a></li>
-        <li><a href="index.html#filmes">Filmes</a></li>
-        <li><a href="index.html#series">Séries</a></li>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="../index.html#curiosidades">Curiosidades</a></li>
+        <li><a href="../index.html#curtas">Curtas</a></li>
+        <li><a href="../index.html#filmes">Filmes</a></li>
+        <li><a href="../index.html#series">Séries</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Links Úteis</h4>
       <ul>
-        <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="sobre.html">Sobre Nós</a></li>
-        <li><a href="termos.html">Termos de Uso</a></li>
+        <li><a href="../politica-privacidade.html">Política de Privacidade</a></li>
+        <li><a href="../contato.html">Contato</a></li>
+        <li><a href="../sobre.html">Sobre Nós</a></li>
+        <li><a href="../termos.html">Termos de Uso</a></li>
       </ul>
     </div>
     <div class="footer-col">
