@@ -6,7 +6,6 @@
   <title>Revolução 5G: Futuro da Conectividade — Blog InformaJá</title>
   <meta name="description" content="Descubra como a tecnologia 5G está transformando a conectividade e revolucionando a forma como nos comunicamos e interagimos com o mundo digital.">
   <style>
-    /* ESTILOS GLOBAIS */
     * {
       margin: 0;
       padding: 0;
@@ -18,12 +17,9 @@
       background: #f9f9f9;
       color: #222;
       line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
     
-    /* HEADER */
+    /* Header */
     header {
       background: #003322;
       color: #fff;
@@ -33,7 +29,6 @@
       justify-content: space-between;
       flex-wrap: wrap;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      position: relative;
     }
     
     header .logo {
@@ -41,7 +36,6 @@
       font-weight: 700;
       display: flex;
       align-items: center;
-      z-index: 1001;
     }
     
     header .logo img {
@@ -110,7 +104,6 @@
       background: none;
       border: none;
       cursor: pointer;
-      color: #003322;
     }
     
     .menu-toggle {
@@ -120,7 +113,6 @@
       width: 30px;
       height: 25px;
       cursor: pointer;
-      z-index: 1001;
     }
     
     .menu-toggle span {
@@ -131,22 +123,20 @@
       transition: all 0.3s;
     }
     
-    /* CONTAINER PRINCIPAL */
+    /* Container */
     .wrap {
       max-width: 980px;
       margin: 22px auto;
       padding: 0 16px;
-      flex: 1;
     }
     
-    /* CONTEÚDO DO ARTIGO */
+    /* Artigo */
     article {
       background: #fff;
       border: 1px solid #e6e6e6;
       border-radius: 8px;
       padding: 30px;
       box-shadow: 0 3px 15px rgba(0,0,0,0.05);
-      margin-bottom: 30px;
     }
     
     article h1 {
@@ -217,7 +207,7 @@
       border-radius: 0 8px 8px 0;
     }
     
-    /* COMPARTILHAR */
+    /* Compartilhe */
     .share {
       margin: 30px 0;
       text-align: center;
@@ -273,7 +263,7 @@
       color: #083b1d;
     }
     
-    /* NAVEGAÇÃO ENTRE ARTIGOS */
+    /* Prev/Next */
     .pn {
       display: flex;
       justify-content: space-between;
@@ -306,7 +296,7 @@
       margin-bottom: 5px;
     }
     
-    /* ARTIGOS RELACIONADOS */
+    /* Veja Também */
     .also {
       margin: 40px 0 20px;
     }
@@ -398,12 +388,12 @@
       line-height: 1.5;
     }
     
-    /* FOOTER */
+    /* Footer */
     footer {
       background: #222;
       color: #eee;
+      margin-top: 60px;
       padding: 40px 20px;
-      margin-top: auto;
     }
     
     .footer-wrap {
@@ -420,6 +410,7 @@
       margin-bottom: 15px;
       display: flex;
       align-items: center;
+      justify-content: center;
     }
     
     .footer-logo img {
@@ -470,6 +461,7 @@
       display: flex;
       gap: 15px;
       margin-top: 15px;
+      justify-content: center;
     }
     
     .social-icons a {
@@ -497,31 +489,19 @@
       padding-top: 20px;
     }
     
-    /* ANIMAÇÕES PARA O MENU TOGGLE */
-    .menu-toggle.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -6px);
-    }
-    
-    /* MEDIA QUERIES PARA RESPONSIVIDADE */
+    /* Media Queries para Responsividade */
     @media (max-width: 768px) {
       header {
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         padding: 10px 15px;
       }
       
       .menu-toggle {
         display: flex;
-        position: static;
-        margin-left: auto;
+        position: absolute;
+        top: 15px;
+        right: 20px;
       }
       
       nav {
@@ -530,16 +510,7 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
-        margin-top: 15px;
-        padding: 15px;
-        background: #002211;
-        border-radius: 8px;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        margin-top: 10px;
       }
       
       nav.active {
@@ -619,11 +590,6 @@
         width: 200px;
         justify-content: center;
       }
-      
-      .menu-toggle {
-        width: 25px;
-        height: 20px;
-      }
     }
   </style>
 </head>
@@ -685,7 +651,7 @@
     
     <p>Com sua baixa latência e alta confiabilidade, o 5G permitirá avanços significativos em diversas áreas. Na medicina, possibilitará cirurgias remotas com precisão milimétrica. No transporte, será a espinha dorsal dos veículos autônomos, permitindo comunicação instantânea entre carros e infraestrutura urbana. Na indústria, facilitará a implementação de fábricas inteligentes com IoT em escala massiva.</p>
     
-    <p>Além disso, o 5G trará experiências de realidade aumentada e virtual verdadeiramente imersivas, transformando setores como entretenimento, educação e turismo. Imagine visitar museus históricos do outro lado do mundo através de experiências de VR em tempo real, sans qualquer lag ou atraso.</p>
+    <p>Além disso, o 5G trará experiências de realidade aumentada e virtual verdadeiramente imersivas, transformando setores como entretenimento, educação e turismo. Imagine visitar museus históricos do outro lado do mundo através de experiências de VR em tempo real, sem qualquer lag ou atraso.</p>
 
     <!-- Compartilhe -->
     <div class="share">
@@ -797,40 +763,24 @@
 
 <script>
   // Menu mobile toggle
-  document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mainNav = document.getElementById('main-nav');
-    
-    if (mobileMenu && mainNav) {
-      mobileMenu.addEventListener('click', function() {
-        mainNav.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-      });
-    }
-    
-    // Fechar menu ao clicar em um link
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mainNav.classList.remove('active');
-        mobileMenu.classList.remove('active');
-      });
-    });
-    
-    // Script: gera links de compartilhamento com URL/Título atuais
-    const shareFb = document.getElementById('share-fb');
-    const shareTw = document.getElementById('share-tw');
-    const shareWa = document.getElementById('share-wa');
-    
-    if (shareFb && shareTw && shareWa) {
-      var url = encodeURIComponent(window.location.href);
-      var title = encodeURIComponent(document.title);
-  
-      shareFb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
-      shareTw.href = 'https://twitter.com/intent/tweet?url=' + url + '&text=' + title;
-      shareWa.href = 'https://wa.me/?text=' + title + '%20' + url;
-    }
+  document.getElementById('mobile-menu').addEventListener('click', function() {
+    document.getElementById('main-nav').classList.toggle('active');
   });
+
+  // Script: gera links de compartilhamento com URL/Título atuais
+  (function(){
+    var url = encodeURIComponent(location.href);
+    var title = encodeURIComponent(document.title);
+
+    document.getElementById('share-fb').href =
+      'https://www.facebook.com/sharer/sharer.php?u=' + url;
+
+    document.getElementById('share-tw').href =
+      'https://twitter.com/intent/tweet?url=' + url + '&text=' + title;
+
+    document.getElementById('share-wa').href =
+      'https://wa.me/?text=' + title + '%20' + url;
+  })();
 </script>
 
 </body>
