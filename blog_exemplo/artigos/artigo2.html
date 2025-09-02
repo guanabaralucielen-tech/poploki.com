@@ -1,787 +1,375 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Revolução 5G: Futuro da Conectividade — Blog InformaJá</title>
-  <meta name="description" content="Descubra como a tecnologia 5G está transformando a conectividade e revolucionando a forma como nos comunicamos e interagimos com o mundo digital.">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+/* ESTILOS ESPECÍFICOS DOS ARTIGOS */
+.article-content {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.article-content h1 {
+    font-size: 36px;
+    margin: 0 0 10px;
+    color: #003322;
+    line-height: 1.3;
+}
+
+.article-meta {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.author-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #555;
+}
+
+.hero {
+    width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+    height: 400px;
+    object-fit: cover;
+}
+
+.article-content p {
+    line-height: 1.75;
+    margin: 20px 0;
+    font-size: 17px;
+}
+
+.article-content h2 {
+    color: #003322;
+    margin: 30px 0 15px;
+    font-size: 24px;
+    border-left: 4px solid #003322;
+    padding-left: 10px;
+}
+
+blockquote {
+    border-left: 4px solid #0066cc;
+    padding-left: 20px;
+    margin: 25px 0;
+    font-style: italic;
+    color: #555;
+    background: #f5f9ff;
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Compartilhe */
+.share {
+    margin: 30px 0;
+    text-align: center;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.share h3 {
+    letter-spacing: .08em;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.share .row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.btn.fb {
+    background: #1877f2;
+}
+
+.btn.tw {
+    background: #1da1f2;
+}
+
+.btn.wa {
+    background: #25d366;
+    color: #083b1d;
+}
+
+/* Prev/Next */
+.pn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.pn a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.pn a:hover {
+    color: #003322;
+    text-decoration: underline;
+}
+
+.pn > div {
+    max-width: 45%;
+}
+
+.pn .label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Veja Também */
+.also {
+    margin: 40px 0 20px;
+}
+
+.also h3 {
+    font-weight: 700;
+    margin: 0 0 20px;
+    font-size: 22px;
+    color: #003322;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.also h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #003322;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.article-card {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #222;
+    display: block;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.article-card:hover img {
+    transform: scale(1.05);
+}
+
+.chip {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #0c5b44;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.article-card .p {
+    padding: 15px;
+}
+
+.article-card .t {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #003322;
+}
+
+.article-card .s {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* FOOTER PERSONALIZADO PARA ARTIGOS (atualizado para combinar com a página inicial) */
+.site-footer {
+    background: #222;
+    color: #eee;
+    padding: 25px 0;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-left, .footer-right {
+    flex: 1;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #3498db;
+}
+
+.copyright {
+    font-size: 15px;
+    opacity: 0.9;
+    color: #aaa;
+}
+
+.footer-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(170, 170, 170, 0.3), transparent);
+    margin: 15px 0;
+}
+
+/* Media Queries para Artigos */
+@media (max-width: 768px) {
+    .article-grid {
+        grid-template-columns: 1fr;
     }
     
-    body {
-      background: #f9f9f9;
-      color: #222;
-      line-height: 1.6;
+    .article-content h1 {
+        font-size: 28px;
     }
     
-    /* Header */
-    header {
-      background: #003322;
-      color: #fff;
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
-    header .logo {
-      font-size: 22px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-    }
-    
-    header .logo img {
-      height: 40px;
-      margin-right: 10px;
-    }
-    
-    header .logo a {
-      color: white;
-      text-decoration: none;
-    }
-    
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 15px;
-      transition: opacity 0.3s;
-      padding: 5px 0;
-      position: relative;
-    }
-    
-    nav a:hover {
-      opacity: 0.8;
-    }
-    
-    nav a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #fff;
-      transition: width 0.3s;
-    }
-    
-    nav a:hover::after {
-      width: 100%;
-    }
-    
-    .search {
-      margin-left: 20px;
-      position: relative;
-    }
-    
-    .search input {
-      padding: 8px 12px;
-      border: none;
-      border-radius: 20px;
-      width: 200px;
-      font-size: 14px;
-    }
-    
-    .search button {
-      position: absolute;
-      right: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      justify-content: space-around;
-      width: 30px;
-      height: 25px;
-      cursor: pointer;
-    }
-    
-    .menu-toggle span {
-      height: 3px;
-      width: 100%;
-      background-color: #fff;
-      border-radius: 5px;
-      transition: all 0.3s;
-    }
-    
-    /* Container */
-    .wrap {
-      max-width: 980px;
-      margin: 22px auto;
-      padding: 0 16px;
-    }
-    
-    /* Artigo */
-    article {
-      background: #fff;
-      border: 1px solid #e6e6e6;
-      border-radius: 8px;
-      padding: 30px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.05);
-    }
-    
-    article h1 {
-      font-size: 36px;
-      margin: 0 0 10px;
-      color: #003322;
-      line-height: 1.3;
-    }
-    
-    .meta {
-      color: #666;
-      font-size: 14px;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    
-    .author {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    
-    .author-img {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: #ddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: #555;
-    }
-    
-    .hero {
-      width: 100%;
-      border-radius: 8px;
-      margin: 20px 0;
-      height: 400px;
-      object-fit: cover;
-    }
-    
-    article p {
-      line-height: 1.75;
-      margin: 20px 0;
-      font-size: 17px;
-    }
-    
-    article h2 {
-      color: #003322;
-      margin: 30px 0 15px;
-      font-size: 24px;
-      border-left: 4px solid #003322;
-      padding-left: 10px;
-    }
-    
-    blockquote {
-      border-left: 4px solid #0066cc;
-      padding-left: 20px;
-      margin: 25px 0;
-      font-style: italic;
-      color: #555;
-      background: #f5f9ff;
-      padding: 20px;
-      border-radius: 0 8px 8px 0;
-    }
-    
-    /* Compartilhe */
-    .share {
-      margin: 30px 0;
-      text-align: center;
-      padding: 20px;
-      background: #f5f5f5;
-      border-radius: 8px;
-    }
-    
-    .share h3 {
-      letter-spacing: .08em;
-      font-size: 16px;
-      color: #333;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-    }
-    
-    .share .row {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 18px;
-      border-radius: 8px;
-      border: 0;
-      cursor: pointer;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-    
-    .btn.fb {
-      background: #1877f2;
-    }
-    
-    .btn.tw {
-      background: #1da1f2;
-    }
-    
-    .btn.wa {
-      background: #25d366;
-      color: #083b1d;
-    }
-    
-    /* Prev/Next */
     .pn {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 40px 0;
-      padding: 20px 0;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
-    }
-    
-    .pn a {
-      color: #0066cc;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    
-    .pn a:hover {
-      color: #003322;
-      text-decoration: underline;
+        flex-direction: column;
+        gap: 20px;
     }
     
     .pn > div {
-      max-width: 45%;
-    }
-    
-    .pn .label {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 5px;
-    }
-    
-    /* Veja Também */
-    .also {
-      margin: 40px 0 20px;
-    }
-    
-    .also h3 {
-      font-weight: 700;
-      margin: 0 0 20px;
-      font-size: 22px;
-      color: #003322;
-      position: relative;
-      padding-bottom: 10px;
-    }
-    
-    .also h3::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 60px;
-      height: 3px;
-      background: #003322;
-    }
-    
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-    
-    .card {
-      background: #fff;
-      border: 1px solid #e6e6e6;
-      border-radius: 12px;
-      overflow: hidden;
-      text-decoration: none;
-      color: #222;
-      display: block;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.3s;
-    }
-    
-    .card:hover img {
-      transform: scale(1.05);
-    }
-    
-    .chip {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: #0c5b44;
-      color: #fff;
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-weight: 600;
-    }
-    
-    .thumb {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .card .p {
-      padding: 15px;
-    }
-    
-    .card .t {
-      font-weight: 700;
-      font-size: 16px;
-      margin-bottom: 8px;
-      color: #003322;
-    }
-    
-    .card .s {
-      font-size: 14px;
-      color: #666;
-      line-height: 1.5;
-    }
-    
-    /* Footer */
-    footer {
-      background: #222;
-      color: #eee;
-      margin-top: 60px;
-      padding: 40px 20px;
-    }
-    
-    .footer-wrap {
-      max-width: 1080px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-    }
-    
-    .footer-logo {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .footer-logo img {
-      height: 30px;
-      margin-right: 10px;
-    }
-    
-    .footer-col h4 {
-      margin: 0 0 15px;
-      color: #fff;
-      font-size: 18px;
-      position: relative;
-      padding-bottom: 8px;
-    }
-    
-    .footer-col h4::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 40px;
-      height: 2px;
-      background: #0066cc;
-    }
-    
-    .footer-col ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .footer-col li {
-      margin: 8px 0;
-    }
-    
-    .footer-col a {
-      color: #ccc;
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.3s;
-    }
-    
-    .footer-col a:hover {
-      color: #fff;
-    }
-    
-    .social-icons {
-      display: flex;
-      gap: 15px;
-      margin-top: 15px;
-      justify-content: center;
-    }
-    
-    .social-icons a {
-      color: #fff;
-      background: #444;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.3s;
-    }
-    
-    .social-icons a:hover {
-      background: #0066cc;
-    }
-    
-    .copy {
-      text-align: center;
-      margin-top: 30px;
-      color: #aaa;
-      font-size: 13px;
-      border-top: 1px solid #444;
-      padding-top: 20px;
-    }
-    
-    /* Media Queries para Responsividade */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 15px;
-      }
-      
-      .menu-toggle {
-        display: flex;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-      }
-      
-      nav {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        margin-top: 10px;
-      }
-      
-      nav.active {
-        display: flex;
-      }
-      
-      .search {
-        margin-left: 0;
-        width: 100%;
-        margin-top: 10px;
-      }
-      
-      .search input {
-        width: 100%;
-      }
-      
-      .hero {
-        height: 250px;
-      }
-      
-      article h1 {
-        font-size: 28px;
-      }
-      
-      .pn {
-        flex-direction: column;
-        gap: 20px;
-      }
-      
-      .pn > div {
         max-width: 100%;
-      }
-      
-      .grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .footer-wrap {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-      
-      .meta {
+    }
+    
+    .hero {
+        height: 250px;
+    }
+    
+    .article-meta {
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
-      }
     }
     
-    @media (max-width: 480px) {
-      header .logo {
-        font-size: 18px;
-      }
-      
-      header .logo img {
-        height: 30px;
-      }
-      
-      article {
+    /* Responsividade para o footer personalizado */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .footer-right {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-content {
         padding: 20px;
-      }
-      
-      article h1 {
+    }
+    
+    .article-content h1 {
         font-size: 24px;
-      }
-      
-      .hero {
+    }
+    
+    .hero {
         height: 200px;
-      }
-      
-      .share .row {
+    }
+    
+    .share .row {
         flex-direction: column;
         align-items: center;
-      }
-      
-      .btn {
+    }
+    
+    .btn {
         width: 200px;
         justify-content: center;
-      }
     }
-  </style>
-</head>
-<body>
-
-<!-- Cabeçalho -->
-<header>
-  <div class="logo">
-    <img src="../Img/logo.png" alt="Logo Blog InformaJá">
-    <a href="../index.html">InformaJá</a>
-  </div>
-  
-  <div class="menu-toggle" id="mobile-menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  
-  <nav id="main-nav">
-    <a href="../index.html">Início</a>
-    <a href="../index.html#curiosidades">Curiosidades</a>
-    <a href="../index.html#curtas">Curtas</a>
-    <a href="../index.html#filmes">Filmes</a>
-    <a href="../index.html#series">Séries</a>
-    <div class="search">
-      <input type="text" placeholder="Pesquisar...">
-      <button>🔍</button>
-    </div>
-  </nav>
-</header>
-
-<!-- Artigo -->
-<div class="wrap">
-  <article>
-    <div class="meta">
-      <span>TECNOLOGIA — Comunicação, Inovação</span>
-      <span>12 de Maio, 2023</span>
-      <div class="author">
-        <div class="author-img">CS</div>
-        <span>Por: Carlos Silva</span>
-      </div>
-    </div>
     
-    <h1>Revolução 5G: O Futuro da Conectividade Chegou</h1>
+    .article-card .t {
+        font-size: 16px;
+    }
     
-    <img class="hero" src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="Tecnologia 5G">
-    
-    <p>A quinta geração de tecnologia de comunicação móvel, conhecida como 5G, promete revolucionar a forma como nos conectamos e interagimos com o mundo digital. Com velocidades até 100 vezes superiores ao 4G, latência reduzida e capacidade para conectar muito mais dispositivos simultaneamente, o 5G está preparado para transformar não apenas nossos smartphones, mas também cidades, indústrias e a própria sociedade.</p>
-    
-    <h2>O que Torna o 5G Tão Especial?</h2>
-    
-    <p>Diferente das gerações anteriores, o 5G não é apenas uma evolução incremental, mas uma mudança paradigmática na tecnologia de communication. Enquanto o 4G foi projetado principalmente para conectar pessoas, o 5G foi desenvolvido para conectar praticamente tudo - de dispositivos pessoais a sensores industriais, carros autônomos e sistemas de saúde remotos.</p>
-    
-    <blockquote>
-      "O 5G representa muito mais do que simplesmente velocidades mais rápidas. É a fundação para uma sociedade verdadeiramente conectada e inteligente." - Especialista em Tecnologia
-    </blockquote>
-    
-    <h2>Aplicações que Transformarão o Mundo</h2>
-    
-    <p>Com sua baixa latência e alta confiabilidade, o 5G permitirá avanços significativos em diversas áreas. Na medicina, possibilitará cirurgias remotas com precisão milimétrica. No transporte, será a espinha dorsal dos veículos autônomos, permitindo comunicação instantânea entre carros e infraestrutura urbana. Na indústria, facilitará a implementação de fábricas inteligentes com IoT em escala massiva.</p>
-    
-    <p>Além disso, o 5G trará experiências de realidade aumentada e virtual verdadeiramente imersivas, transformando setores como entretenimento, educação e turismo. Imagine visitar museus históricos do outro lado do mundo através de experiências de VR em tempo real, sem qualquer lag ou atraso.</p>
-
-    <!-- Compartilhe -->
-    <div class="share">
-      <h3>COMPARTILHE ESTE ARTIGO</h3>
-      <div class="row">
-        <a class="btn fb" id="share-fb" href="#" target="_blank" rel="noopener">Facebook</a>
-        <a class="btn tw" id="share-tw" href="#" target="_blank" rel="noopener">Twitter</a>
-        <a class="btn wa" id="share-wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </div>
-
-    <!-- Anterior / Próximo -->
-    <div class="pn">
-      <div>
-        <div class="label">Artigo anterior</div>
-        <a href="beneficios-cafe.html">Benefícios do Café Especial para a Saúde</a>
-      </div>
-      <div style="text-align: right;">
-        <div class="label">Próximo artigo</div>
-        <a href="guia-5g.html">Entre na Era 5G Agora: Guia Prático</a>
-      </div>
-    </div>
-
-    <!-- Veja também -->
-    <div class="also">
-      <h3>VEJA TAMBÉM</h3>
-      <div class="grid">
-        <a class="card" href="curtas-premiados.html">
-          <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1542157585-ef20bfcce815?q=80&w=1200&auto=format&fit=crop" alt="Jovens talentos">
-            <span class="chip">CURTAS</span>
-          </div>
-          <div class="p">
-            <div class="t">Brilho dos jovens talentos: curtas premiados</div>
-            <div class="s">Descubra os novos cineastas que estão revolucionando a indústria cinematográfica.</div>
-          </div>
-        </a>
-        <a class="card" href="apps-pets.html">
-          <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1548095115-45697e336193?q=80&w=1200&auto=format&fit=crop" alt="Aplicativos para pets">
-            <span class="chip">APPS</span>
-          </div>
-          <div class="p">
-            <div class="t">Adicione filtros fofos ao pet em 30s</div>
-            <div class="s">Aplicativos divertidos para transformar as fotos do seu animal de estimação.</div>
-          </div>
-        </a>
-        <a class="card" href="../index.html">
-          <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=600&auto=format&fit=crop" alt="Página inicial">
-            <span class="chip">INÍCIO</span>
-          </div>
-          <div class="p">
-            <div class="t">Voltar à Página Inicial</div>
-            <div class="s">Confira mais artigos interessantes em nossa página principal</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </article>
-</div>
-
-<!-- Rodapé -->
-<footer>
-  <div class="footer-wrap">
-    <div>
-      <div class="footer-logo">
-        <img src="../Img/logo.png" alt="Logo Blog InformaJá">
-        InformaJá
-      </div>
-      <p>Conteúdo de entretenimento e informação para o seu dia a dia.</p>
-      <div class="social-icons">
-        <a href="#" aria-label="Facebook">f</a>
-        <a href="#" aria-label="Instagram">i</a>
-        <a href="#" aria-label="Twitter">t</a>
-        <a href="#" aria-label="YouTube">y</a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Navegação</h4>
-      <ul>
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="../index.html#curiosidades">Curiosidades</a></li>
-        <li><a href="../index.html#curtas">Curtas</a></li>
-        <li><a href="../index.html#filmes">Filmes</a></li>
-        <li><a href="../index.html#series">Séries</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Links Úteis</h4>
-      <ul>
-        <li><a href="../politica-privacidade.html">Política de Privacidade</a></li>
-        <li><a href="../contato.html">Contato</a></li>
-        <li><a href="../sobre.html">Sobre Nós</a></li>
-        <li><a href="../termos.html">Termos de Uso</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contato</h4>
-      <ul>
-        <li>Email: contato@bloginformaja.com</li>
-        <li>Telefone: (11) 9999-8888</li>
-        <li>Endereço: Av. Paulista, 1000, São Paulo</li>
-      </ul>
-    </div>
-  </div>
-  <div class="copy">© 2023 Blog InformaJá — Todos os direitos reservados</div>
-</footer>
-
-<script>
-  // Menu mobile toggle
-  document.getElementById('mobile-menu').addEventListener('click', function() {
-    document.getElementById('main-nav').classList.toggle('active');
-  });
-
-  // Script: gera links de compartilhamento com URL/Título atuais
-  (function(){
-    var url = encodeURIComponent(location.href);
-    var title = encodeURIComponent(document.title);
-
-    document.getElementById('share-fb').href =
-      'https://www.facebook.com/sharer/sharer.php?u=' + url;
-
-    document.getElementById('share-tw').href =
-      'https://twitter.com/intent/tweet?url=' + url + '&text=' + title;
-
-    document.getElementById('share-wa').href =
-      'https://wa.me/?text=' + title + '%20' + url;
-  })();
-</script>
-
-</body>
-</html>
+    .article-card .s {
+        font-size: 13px;
+    }
+}
