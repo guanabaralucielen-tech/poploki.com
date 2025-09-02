@@ -222,6 +222,48 @@ footer {
     padding-top: 20px;
 }
 
+/* FOOTER PERSONALIZADO (adicionei esta seção) */
+.site-footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 25px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-left, .footer-right {
+    flex: 1;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #3498db;
+}
+
+.copyright {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.footer-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(236, 240, 241, 0.3), transparent);
+    margin: 15px 0;
+}
+
 /* ESTILOS ESPECÍFICOS DA PÁGINA INICIAL */
 .page-title {
     text-align: center;
@@ -416,6 +458,17 @@ footer {
     
     .page-title {
         font-size: 26px;
+    }
+    
+    /* Responsividade para o footer personalizado (adicionei) */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .footer-right {
+        text-align: center;
     }
 }
 
