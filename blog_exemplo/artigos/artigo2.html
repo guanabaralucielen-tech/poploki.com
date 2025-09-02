@@ -3,664 +3,120 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Revolução 5G: Futuro da Conectividade — Blog InformaJá</title>
-  <meta name="description" content="Descubra como a tecnologia 5G está transformando a conectividade e revolucionando a forma como nos comunicamos e interagimos com o mundo digital.">
+  <title>Crédito Pré-aprovado: rápido, digital e sem burocracia — Blog InformaJá</title>
+  <meta name="description" content="Como funciona o crédito pré-aprovado, vantagens, cuidados e onde consultar nos principais bancos. Veja quando usar de forma estratégica.">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-    }
-    
-    body {
-      background: #f9f9f9;
-      color: #222;
-      line-height: 1.6;
-    }
-    
-    /* Header */
-    header {
-      background: #003322;
-      color: #fff;
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
-    header .logo {
-      font-size: 22px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-    }
-    
-    header .logo img {
-      height: 40px;
-      margin-right: 10px;
-    }
-    
-    header .logo a {
-      color: white;
-      text-decoration: none;
-    }
-    
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 15px;
-      transition: opacity 0.3s;
-      padding: 5px 0;
-      position: relative;
-    }
-    
-    nav a:hover {
-      opacity: 0.8;
-    }
-    
-    nav a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #fff;
-      transition: width 0.3s;
-    }
-    
-    nav a:hover::after {
-      width: 100%;
-    }
-    
-    .search {
-      margin-left: 20px;
-      position: relative;
-    }
-    
-    .search input {
-      padding: 8px 12px;
-      border: none;
-      border-radius: 20px;
-      width: 200px;
-      font-size: 14px;
-    }
-    
-    .search button {
-      position: absolute;
-      right: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      justify-content: space-around;
-      width: 30px;
-      height: 25px;
-      cursor: pointer;
-    }
-    
-    .menu-toggle span {
-      height: 3px;
-      width: 100%;
-      background-color: #fff;
-      border-radius: 5px;
-      transition: all 0.3s;
-    }
-    
-    /* Container */
-    .wrap {
-      max-width: 980px;
-      margin: 22px auto;
-      padding: 0 16px;
-    }
-    
-    /* Artigo */
-    article {
-      background: #fff;
-      border: 1px solid #e6e6e6;
-      border-radius: 8px;
-      padding: 30px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.05);
-    }
-    
-    article h1 {
-      font-size: 36px;
-      margin: 0 0 10px;
-      color: #003322;
-      line-height: 1.3;
-    }
-    
-    .meta {
-      color: #666;
-      font-size: 14px;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    
-    .author {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    
-    .author-img {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: #ddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: #555;
-    }
-    
-    .hero {
-      width: 100%;
-      border-radius: 8px;
-      margin: 20px 0;
-      height: 400px;
-      object-fit: cover;
-    }
-    
-    article p {
-      line-height: 1.75;
-      margin: 20px 0;
-      font-size: 17px;
-    }
-    
-    article h2 {
-      color: #003322;
-      margin: 30px 0 15px;
-      font-size: 24px;
-      border-left: 4px solid #003322;
-      padding-left: 10px;
-    }
-    
-    blockquote {
-      border-left: 4px solid #0066cc;
-      padding-left: 20px;
-      margin: 25px 0;
-      font-style: italic;
-      color: #555;
-      background: #f5f9ff;
-      padding: 20px;
-      border-radius: 0 8px 8px 0;
-    }
-    
-    /* Compartilhe */
-    .share {
-      margin: 30px 0;
-      text-align: center;
-      padding: 20px;
-      background: #f5f5f5;
-      border-radius: 8px;
-    }
-    
-    .share h3 {
-      letter-spacing: .08em;
-      font-size: 16px;
-      color: #333;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-    }
-    
-    .share .row {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 18px;
-      border-radius: 8px;
-      border: 0;
-      cursor: pointer;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    
-    .btn.fb {
-      background: #1877f2;
-    }
-    
-    .btn.tw {
-      background: #1da1f2;
-    }
-    
-    .btn.wa {
-      background: #25d366;
-      color: #083b1d;
-    }
-    
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-    
-    /* Prev/Next */
-    .pn {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 40px 0;
-      padding: 20px 0;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
-    }
-    
-    .pn a {
-      color: #0066cc;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    
-    .pn a:hover {
-      color: #003322;
-      text-decoration: underline;
-    }
-    
-    .pn > div {
-      max-width: 45%;
-    }
-    
-    .pn .label {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 5px;
-    }
-    
-    /* Veja Também */
-    .also {
-      margin: 40px 0 20px;
-    }
-    
-    .also h3 {
-      font-weight: 700;
-      margin: 0 0 20px;
-      font-size: 22px;
-      color: #003322;
-      position: relative;
-      padding-bottom: 10px;
-    }
-    
-    .also h3::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 60px;
-      height: 3px;
-      background: #003322;
-    }
-    
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-    
-    .card {
-      background: #fff;
-      border: 1px solid #e6e6e6;
-      border-radius: 12px;
-      overflow: hidden;
-      text-decoration: none;
-      color: #222;
-      display: block;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.3s;
-    }
-    
-    .card:hover img {
-      transform: scale(1.05);
-    }
-    
-    .chip {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: #0c5b44;
-      color: #fff;
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-weight: 600;
-    }
-    
-    .thumb {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .card .p {
-      padding: 15px;
-    }
-    
-    .card .t {
-      font-weight: 700;
-      font-size: 16px;
-      margin-bottom: 8px;
-      color: #003322;
-    }
-    
-    .card .s {
-      font-size: 14px;
-      color: #666;
-      line-height: 1.5;
-    }
-    
-    /* Footer - Ajustado para ficar igual à página inicial */
-    footer {
-      background: #B215B2;
-      color: #ccc;
-      padding: 40px 20px;
-      margin-top: 60px;
-    }
-    
-    .footer-wrap {
-      max-width: 1080px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-    }
-    
-    .footer-logo {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .footer-logo img {
-      height: 60px;
-      margin-right: 10px;
-    }
-    
-    .footer-col h4 {
-      margin-bottom: 15px;
-      color: #fff;
-      font-size: 18px;
-      position: relative;
-      padding-bottom: 8px;
-    }
-    
-    .footer-col h4::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 40px;
-      height: 2px;
-      background: #0066cc;
-    }
-    
-    .footer-col ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .footer-col ul li {
-      margin-bottom: 8px;
-    }
-    
-    .footer-col ul li a {
-      color: #ccc;
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.3s;
-    }
-    
-    .footer-col ul li a:hover {
-      color: #fff;
-    }
-    
-    .social-icons {
-      display: flex;
-      gap: 15px;
-      margin-top: 15px;
-      justify-content: center;
-    }
-    
-    .social-icons a {
-      color: #444;
-      background: #fff;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.3s;
-    }
-    
-    .social-icons a:hover {
-      background: #0066cc;
-    }
-    
-    .copy {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 13px;
-      color: #aaa;
-      border-top: 1px solid #444;
-      padding-top: 20px;
-    }
-    
-    /* Estilos do Rodapé Personalizado (adicionei igual à página inicial) */
-    .site-footer {
-      background: #2C2C2C;
-      color: #ecf0f1;
-      padding: 8px 0;
-    }
-    
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-    }
-    
-    .footer-left, .footer-right {
-      flex: 1;
-    }
-    
-    .footer-right {
-      text-align: right;
-    }
-    
-    .footer-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 5px;
-      color: #fff;
-    }
-    
-    .copyright {
-      font-size: 15px;
-      opacity: 0.9;
-    }
-    
-    .footer-divider {
-      height: 1px;
-      background: linear-gradient(to right, transparent, rgba(236, 240, 241, 0.3), transparent);
-      margin: 15px 0;
-    }
-    
-    /* Media Queries para Responsividade */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, Helvetica, sans-serif; }
+    body { background: #f9f9f9; color: #222; line-height: 1.6; }
+    header { background: #B215B2; color: #fff; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    header .logo { font-size: 22px; font-weight: 700; display: flex; align-items: center; }
+    header .logo img { height: 40px; margin-right: 10px; }
+    header .logo a { color: white; text-decoration: none; }
+    nav { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    nav a { color: #fff; text-decoration: none; font-size: 15px; transition: opacity 0.3s; padding: 5px 0; position: relative; }
+    nav a:hover { opacity: 0.8; }
+    nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: #fff; transition: width 0.3s; }
+    nav a:hover::after { width: 100%; }
+    .search { margin-left: 20px; position: relative; }
+    .search input { padding: 8px 12px; border: none; border-radius: 20px; width: 200px; font-size: 14px; }
+    .search button { position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; }
+    .menu-toggle { display: none; flex-direction: column; justify-content: space-around; width: 30px; height: 25px; cursor: pointer; }
+    .menu-toggle span { height: 3px; width: 100%; background-color: #fff; border-radius: 5px; transition: all 0.3s; }
+    .wrap { max-width: 980px; margin: 22px auto; padding: 0 16px; }
+    article { background: #fff; border: 1px solid #e6e6e6; border-radius: 8px; padding: 30px; box-shadow: 0 3px 15px rgba(0,0,0,0.05); }
+    article h1 { font-size: 36px; margin: 0 0 10px; color: #003322; line-height: 1.3; }
+    .meta { color: #666; font-size: 14px; margin-bottom: 15px; display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+    .author { display: flex; align-items: center; gap: 8px; }
+    .author-img { width: 30px; height: 30px; border-radius: 50%; background: #ddd; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #555; }
+    .hero { width: 100%; border-radius: 8px; margin: 20px 0; height: 400px; object-fit: cover; }
+    article p { line-height: 1.75; margin: 20px 0; font-size: 17px; }
+    article h2 { color: #003322; margin: 30px 0 15px; font-size: 24px; border-left: 4px solid #003322; padding-left: 10px; }
+    blockquote { border-left: 4px solid #0066cc; padding-left: 20px; margin: 25px 0; font-style: italic; color: #555; background: #f5f9ff; padding: 20px; border-radius: 0 8px 8px 0; }
+    .share { margin: 30px 0; text-align: center; padding: 20px; background: #f5f5f5; border-radius: 8px; }
+    .share h3 { letter-spacing: .08em; font-size: 16px; color: #333; margin-bottom: 15px; text-transform: uppercase; }
+    .share .row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 8px; border: 0; cursor: pointer; text-decoration: none; color: #fff; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; }
+    .btn.fb { background: #1877f2; }
+    .btn.tw { background: #1da1f2; }
+    .btn.wa { background: #25d366; color: #083b1d; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
+    .pn { display: flex; justify-content: space-between; align-items: center; margin: 40px 0; padding: 20px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+    .pn a { color: #0066cc; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+    .pn a:hover { color: #003322; text-decoration: underline; }
+    .pn > div { max-width: 45%; }
+    .pn .label { font-size: 14px; color: #666; margin-bottom: 5px; }
+    .also { margin: 40px 0 20px; }
+    .also h3 { font-weight: 700; margin: 0 0 20px; font-size: 22px; color: #003322; position: relative; padding-bottom: 10px; }
+    .also h3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 60px; height: 3px; background: #003322; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .card { background: #fff; border: 1px solid #e6e6e6; border-radius: 12px; overflow: hidden; text-decoration: none; color: #222; display: block; transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    .card img { width: 100%; height: 180px; object-fit: cover; display: block; transition: transform 0.3s; }
+    .card:hover img { transform: scale(1.05); }
+    .chip { position: absolute; top: 10px; left: 10px; background: #0c5b44; color: #fff; font-size: 12px; padding: 4px 10px; border-radius: 999px; font-weight: 600; }
+    .thumb { position: relative; overflow: hidden; }
+    .card .p { padding: 15px; }
+    .card .t { font-weight: 700; font-size: 16px; margin-bottom: 8px; color: #003322; }
+    .card .s { font-size: 14px; color: #666; line-height: 1.5; }
+    footer { background: #B215B2; color: #ccc; padding: 40px 20px; margin-top: 1px; }
+    .footer-wrap { max-width: 1080px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+    .footer-logo { font-size: 20px; font-weight: bold; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; }
+    .footer-logo img { height: 60px; margin-right: 10px; }
+    .footer-col h4 { margin-bottom: 15px; color: #fff; font-size: 18px; position: relative; padding-bottom: 8px; }
+    .footer-col h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 2px; background: #0066cc; }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a { color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .social-icons { display: flex; gap: 15px; margin-top: 15px; justify-content: center; }
+    .social-icons a { color: #444; background: #fff; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.3s; }
+    .social-icons a:hover { background: #0066cc; }
+    .copy { text-align: center; margin-top: 40px; font-size: 13px; color: #aaa; border-top: 1px solid #444; padding-top: 20px; }
+    .site-footer { background: #2C2C2C; color: #ecf0f1; padding: 8px 0; }
+    .footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+    .footer-left, .footer-right { flex: 1; }
+    .footer-right { text-align: right; }
+    .footer-title { font-size: 18px; font-weight: 600; margin-bottom: 5px; color: #fff; }
+    .copyright { font-size: 15px; opacity: 0.9; }
+    .footer-divider { height: 1px; background: linear-gradient(to right, transparent, rgba(236, 240, 241, 0.3), transparent); margin: 15px 0; }
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 15px;
-      }
-      
-      .menu-toggle {
-        display: flex;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-      }
-      
-      nav {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        margin-top: 10px;
-      }
-      
-      nav.active {
-        display: flex;
-      }
-      
-      .search {
-        margin-left: 0;
-        width: 100%;
-        margin-top: 10px;
-      }
-      
-      .search input {
-        width: 100%;
-      }
-      
-      .hero {
-        height: 250px;
-      }
-      
-      article h1 {
-        font-size: 28px;
-      }
-      
-      .pn {
-        flex-direction: column;
-        gap: 20px;
-      }
-      
-      .pn > div {
-        max-width: 100%;
-      }
-      
-      .grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .footer-wrap {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-      
-      .meta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
-      
-      /* Ajustes para o footer na versão mobile */
-      .footer-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-      }
-      
-      .footer-right {
-        text-align: center;
-      }
+      header { flex-direction: column; align-items: flex-start; padding: 10px 15px; }
+      .menu-toggle { display: flex; position: absolute; top: 15px; right: 20px; }
+      nav { display: none; width: 100%; flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 10px; }
+      nav.active { display: flex; }
+      .search { margin-left: 0; width: 100%; margin-top: 10px; }
+      .search input { width: 100%; }
+      .hero { height: 250px; }
+      article h1 { font-size: 28px; }
+      .pn { flex-direction: column; gap: 20px; }
+      .pn > div { max-width: 100%; }
+      .grid { grid-template-columns: 1fr; }
+      .footer-container { flex-direction: column; text-align: center; gap: 15px; }
+      .footer-right { text-align: center; }
     }
-    
     @media (max-width: 480px) {
-      header .logo {
-        font-size: 18px;
-      }
-      
-      header .logo img {
-        height: 30px;
-      }
-      
-      article {
-        padding: 20px;
-      }
-      
-      article h1 {
-        font-size: 24px;
-      }
-      
-      .hero {
-        height: 200px;
-      }
-      
-      .share .row {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .btn {
-        width: 200px;
-        justify-content: center;
-      }
+      header .logo { font-size: 18px; }
+      header .logo img { height: 30px; }
+      article { padding: 20px; }
+      article h1 { font-size: 24px; }
+      .hero { height: 200px; }
+      .share .row { flex-direction: column; align-items: center; }
+      .btn { width: 200px; justify-content: center; }
     }
   </style>
 </head>
 <body>
 
-<!-- Cabeçalho -->
 <header>
   <div class="logo">
-    <img src="../Img/logo.png" alt="Logo Blog InformaJá">
-    <a href="../index.html">InformaJá</a>
+    <img src="../img/logo1.png" alt="Logo Blog InformaJá">
+    <a href="../index.html">Blog</a>
   </div>
-  
+
   <div class="menu-toggle" id="mobile-menu">
-    <span></span>
-    <span></span>
-    <span></span>
+    <span></span><span></span><span></span>
   </div>
-  
+
   <nav id="main-nav">
     <a href="../index.html">Início</a>
     <a href="../index.html#curiosidades">Curiosidades</a>
@@ -674,39 +130,37 @@
   </nav>
 </header>
 
-<!-- Artigo -->
 <div class="wrap">
   <article>
     <div class="meta">
-      <span>TECNOLOGIA — Comunicação, Inovação</span>
-      <span>12 de Maio, 2023</span>
+      <span>FINANÇAS — Bancos, Planejamento</span>
+      <span>02 de Setembro, 2025</span>
       <div class="author">
-        <div class="author-img">CS</div>
-        <span>Por: Carlos Silva</span>
+        <div class="author-img">RJ</div>
+        <span>Por: Redação InformaJá</span>
       </div>
     </div>
-    
-    <h1>Revolução 5G: O Futuro da Conectividade Chegou</h1>
-    
-    <img class="hero" src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="Tecnologia 5G">
-    
-    <p>A quinta geração de tecnologia de comunicação móvel, conhecida como 5G, promete revolucionar a forma como nos conectamos e interagimos com o mundo digital. Com velocidades até 100 vezes superiores ao 4G, latência reduzida e capacidade para conectar muito mais dispositivos simultaneamente, o 5G está preparado para transformar não apenas nossos smartphones, mas também cidades, indústrias e a própria sociedade.</p>
-    
-    <h2>O que Torna o 5G Tão Especial?</h2>
-    
-    <p>Diferente das gerações anteriores, o 5G não é apenas uma evolução incremental, mas uma mudança paradigmática na tecnologia de communication. Enquanto o 4G foi projetado principalmente para conectar pessoas, o 5G foi desenvolvido para conectar praticamente tudo - de dispositivos pessoais a sensores industriais, carros autônomos e sistemas de saúde remotos.</p>
-    
-    <blockquote>
-      "O 5G representa muito mais do que simplesmente velocidades mais rápidas. É a fundação para uma sociedade verdadeiramente conectada e inteligente." - Especialista em Tecnologia
-    </blockquote>
-    
-    <h2>Aplicações que Transformarão o Mundo</h2>
-    
-    <p>Com sua baixa latência e alta confiabilidade, o 5G permitirá avanços significativos em diversas áreas. Na medicina, possibilitará cirurgias remotas com precisão milimétrica. No transporte, será a espinha dorsal dos veículos autônomos, permitindo comunicação instantânea entre carros e infraestrutura urbana. Na indústria, facilitará a implementação de fábricas inteligentes com IoT em escala massiva.</p>
-    
-    <p>Além disso, o 5G trará experiências de realidade aumentada e virtual verdadeiramente imersivas, transformando setores como entretenimento, educação e turismo. Imagine visitar museus históricos do outro lado do mundo através de experiências de VR em tempo real, sans qualquer lag ou atraso.</p>
 
-    <!-- Compartilhe -->
+    <h1>Crédito Pré-aprovado: rápido, digital e sem burocracia</h1>
+
+    <img class="hero" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.1.0&q=80&w=1200&auto=format&fit=crop" alt="Crédito pré-aprovado no app do banco">
+
+    <p>O crédito pré-aprovado é uma linha oferecida pelos bancos a clientes com bom relacionamento e histórico de pagamentos. A proposta é simples: disponibilizar um limite pronto para contratação diretamente pelo aplicativo ou internet banking, sem necessidade de reunir documentos ou aguardar novas análises extensas.</p>
+
+    <h2>Como funciona na prática</h2>
+    <p>Com base em renda, movimentação da conta e score interno, a instituição define um limite e condições iniciais. Ao contratar, o valor cai na conta em minutos e as parcelas são debitadas no calendário escolhido. Em geral, é possível simular prazos e custos antes de confirmar.</p>
+
+    <blockquote>“Pré-aprovado não significa obrigatório. É uma ferramenta útil quando há objetivo claro, planejamento e custo controlado.”</blockquote>
+
+    <h2>Vantagens e cuidados</h2>
+    <p><strong>Agilidade:</strong> contratação 100% digital e liberação quase imediata. <strong>Previsibilidade:</strong> parcelas fixas ajudam no controle do orçamento. <strong>Flexibilidade:</strong> escolha de prazos e, às vezes, carência curta.</p>
+    <p>Entre os cuidados, compare <strong>CET</strong> (Custo Efetivo Total), evite sobreposição de dívidas e simule cenários pessimistas. Se a finalidade for emergencial, considere um plano de quitação para evitar alongar demais o prazo.</p>
+
+    <h2>Onde consultar: Bradesco, Itaú e Banco do Brasil</h2>
+    <p><strong>Bradesco:</strong> opções de crédito pessoal e consignado pelo app ou internet banking, com simulação rápida e contratação em poucos passos.</p>
+    <p><strong>Itaú:</strong> oferece prazos flexíveis, simulação transparente e suporte pelo app; há modalidades como pessoal, consignado e antecipações específicas.</p>
+    <p><strong>Banco do Brasil:</strong> disponibiliza crédito pessoal automático e outras linhas, com conferência do limite no app, terminais de autoatendimento ou agência.</p>
+
     <div class="share">
       <h3>COMPARTILHE ESTE ARTIGO</h3>
       <div class="row">
@@ -716,19 +170,17 @@
       </div>
     </div>
 
-    <!-- Anterior / Próximo -->
     <div class="pn">
       <div>
         <div class="label">Artigo anterior</div>
-        <a href="beneficios-cafe.html">Benefícios do Café Especial para a Saúde</a>
+        <a href="melhores-emprestimos.html">Melhores Empréstimos e Instituições Confiáveis</a>
       </div>
       <div style="text-align: right;">
         <div class="label">Próximo artigo</div>
-        <a href="guia-5g.html">Entre na Era 5G Agora: Guia Prático</a>
+        <a href="dicas-planejamento-financeiro.html">Guia Rápido de Planejamento Financeiro</a>
       </div>
     </div>
 
-    <!-- Veja também -->
     <div class="also">
       <h3>VEJA TAMBÉM</h3>
       <div class="grid">
@@ -767,12 +219,11 @@
   </article>
 </div>
 
-<!-- Rodapé Principal (ajustado para ficar igual à página inicial) -->
 <footer>
   <div class="footer-wrap">
     <div>
       <div class="footer-logo">
-        <img src="../Img/logo2.png" alt="Logo Blog InformaJá">
+        <img src="../img/logo2.png" alt="Logo Blog InformaJá">
       </div>
       <div class="social-icons">
         <a href="#" aria-label="Facebook">f</a>
@@ -808,7 +259,6 @@
   </div>
 </footer>
 
-<!-- Footer Personalizado (adicionei igual à página inicial) -->
 <footer class="site-footer">
   <div class="footer-container">
     <div class="footer-left">
@@ -822,24 +272,16 @@
 </footer>
 
 <script>
-  // Menu mobile toggle
   document.getElementById('mobile-menu').addEventListener('click', function() {
     document.getElementById('main-nav').classList.toggle('active');
   });
 
-  // Script: gera links de compartilhamento com URL/Título atuais
   (function(){
     var url = encodeURIComponent(location.href);
     var title = encodeURIComponent(document.title);
-
-    document.getElementById('share-fb').href =
-      'https://www.facebook.com/sharer/sharer.php?u=' + url;
-
-    document.getElementById('share-tw').href =
-      'https://twitter.com/intent/tweet?url=' + url + '&text=' + title;
-
-    document.getElementById('share-wa').href =
-      'https://wa.me/?text=' + title + '%20' + url;
+    document.getElementById('share-fb').href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+    document.getElementById('share-tw').href = 'https://twitter.com/intent/tweet?url=' + url + '&text=' + title;
+    document.getElementById('share-wa').href = 'https://wa.me/?text=' + title + '%20' + url;
   })();
 </script>
 
