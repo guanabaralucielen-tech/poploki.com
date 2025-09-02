@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -278,6 +278,7 @@
             margin-bottom: 15px;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
 
         .footer-logo img {
@@ -328,6 +329,7 @@
             display: flex;
             gap: 15px;
             margin-top: 15px;
+            justify-content: center;
         }
 
         .social-icons a {
@@ -355,6 +357,48 @@
             padding-top: 20px;
         }
 
+        /* Estilos do Rodapé Personalizado */
+        .site-footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 25px 0;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .footer-left, .footer-right {
+            flex: 1;
+        }
+        
+        .footer-right {
+            text-align: right;
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #3498db;
+        }
+        
+        .copyright {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+        
+        .footer-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(236, 240, 241, 0.3), transparent);
+            margin: 15px 0;
+        }
+        
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -417,6 +461,16 @@
             
             .page-title {
                 font-size: 26px;
+            }
+            
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .footer-right {
+                text-align: center;
             }
         }
 
@@ -534,7 +588,7 @@
         </div>
     </div>
 
-    <!-- Rodapé -->
+    <!-- Rodapé Principal -->
     <footer>
         <div class="footer-wrap">
             <div>
@@ -578,21 +632,20 @@
                 </ul>
             </div>
         </div>
- </section> </div>
+    </footer>
 
-       
-       <footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-left">
-      <div class="copyright">© Todos os Direitos Reservados</div>
-    </div>
-    <div class="footer-right">
-      <div class="footer-title">Blog InformaJá</div>
-    </div>
-  </div>
-  <div class="footer-divider"></div>
-</footer>
-
+    <!-- Footer Personalizado (adicionei no lugar correto) -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="copyright">© Todos os Direitos Reservados</div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-title">Blog InformaJá</div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+    </footer>
 
     <!-- Script JavaScript -->
     <script>
@@ -620,5 +673,3 @@
     </script>
 </body>
 </html>
-
-
