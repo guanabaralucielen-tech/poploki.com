@@ -460,7 +460,6 @@ footer {
         font-size: 26px;
     }
     
-    /* Responsividade para o footer personalizado (adicionei) */
     .footer-container {
         flex-direction: column;
         text-align: center;
