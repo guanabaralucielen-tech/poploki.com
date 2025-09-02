@@ -245,11 +245,6 @@
       transition: transform 0.2s, box-shadow 0.2s;
     }
     
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-    
     .btn.fb {
       background: #1877f2;
     }
@@ -261,6 +256,11 @@
     .btn.wa {
       background: #25d366;
       color: #083b1d;
+    }
+    
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
     
     /* Prev/Next */
@@ -388,25 +388,25 @@
       line-height: 1.5;
     }
     
-    /* Footer */
+    /* Footer - Ajustado para ficar igual à página inicial */
     footer {
-      background: #222;
-      color: #eee;
-      margin-top: 60px;
+      background: #B215B2;
+      color: #ccc;
       padding: 40px 20px;
+      margin-top: 60px;
     }
     
     .footer-wrap {
       max-width: 1080px;
       margin: auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 30px;
     }
     
     .footer-logo {
       font-size: 20px;
-      font-weight: 700;
+      font-weight: bold;
       margin-bottom: 15px;
       display: flex;
       align-items: center;
@@ -414,12 +414,12 @@
     }
     
     .footer-logo img {
-      height: 30px;
+      height: 60px;
       margin-right: 10px;
     }
     
     .footer-col h4 {
-      margin: 0 0 15px;
+      margin-bottom: 15px;
       color: #fff;
       font-size: 18px;
       position: relative;
@@ -438,22 +438,22 @@
     
     .footer-col ul {
       list-style: none;
-      margin: 0;
       padding: 0;
+      margin: 0;
     }
     
-    .footer-col li {
-      margin: 8px 0;
+    .footer-col ul li {
+      margin-bottom: 8px;
     }
     
-    .footer-col a {
+    .footer-col ul li a {
       color: #ccc;
       text-decoration: none;
       font-size: 14px;
       transition: color 0.3s;
     }
     
-    .footer-col a:hover {
+    .footer-col ul li a:hover {
       color: #fff;
     }
     
@@ -465,8 +465,8 @@
     }
     
     .social-icons a {
-      color: #fff;
-      background: #444;
+      color: #444;
+      background: #fff;
       width: 36px;
       height: 36px;
       border-radius: 50%;
@@ -482,11 +482,53 @@
     
     .copy {
       text-align: center;
-      margin-top: 30px;
-      color: #aaa;
+      margin-top: 40px;
       font-size: 13px;
+      color: #aaa;
       border-top: 1px solid #444;
       padding-top: 20px;
+    }
+    
+    /* Estilos do Rodapé Personalizado (adicionei igual à página inicial) */
+    .site-footer {
+      background: #2C2C2C;
+      color: #ecf0f1;
+      padding: 8px 0;
+    }
+    
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    
+    .footer-left, .footer-right {
+      flex: 1;
+    }
+    
+    .footer-right {
+      text-align: right;
+    }
+    
+    .footer-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+    
+    .copyright {
+      font-size: 15px;
+      opacity: 0.9;
+    }
+    
+    .footer-divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(236, 240, 241, 0.3), transparent);
+      margin: 15px 0;
     }
     
     /* Media Queries para Responsividade */
@@ -557,6 +599,17 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
+      }
+      
+      /* Ajustes para o footer na versão mobile */
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+      
+      .footer-right {
+        text-align: center;
       }
     }
     
@@ -651,7 +704,7 @@
     
     <p>Com sua baixa latência e alta confiabilidade, o 5G permitirá avanços significativos em diversas áreas. Na medicina, possibilitará cirurgias remotas com precisão milimétrica. No transporte, será a espinha dorsal dos veículos autônomos, permitindo comunicação instantânea entre carros e infraestrutura urbana. Na indústria, facilitará a implementação de fábricas inteligentes com IoT em escala massiva.</p>
     
-    <p>Além disso, o 5G trará experiências de realidade aumentada e virtual verdadeiramente imersivas, transformando setores como entretenimento, educação e turismo. Imagine visitar museus históricos do outro lado do mundo através de experiências de VR em tempo real, sem qualquer lag ou atraso.</p>
+    <p>Além disso, o 5G trará experiências de realidade aumentada e virtual verdadeiramente imersivas, transformando setores como entretenimento, educação e turismo. Imagine visitar museus históricos do outro lado do mundo através de experiências de VR em tempo real, sans qualquer lag ou atraso.</p>
 
     <!-- Compartilhe -->
     <div class="share">
@@ -714,20 +767,16 @@
   </article>
 </div>
 
-<!-- Rodapé -->
+<!-- Rodapé Principal (ajustado para ficar igual à página inicial) -->
 <footer>
   <div class="footer-wrap">
     <div>
       <div class="footer-logo">
-        <img src="../Img/logo.png" alt="Logo Blog InformaJá">
-        InformaJá
+        <img src="../Img/logo2.png" alt="Logo Blog InformaJá">
       </div>
-      <p>Conteúdo de entretenimento e informação para o seu dia a dia.</p>
       <div class="social-icons">
         <a href="#" aria-label="Facebook">f</a>
-        <a href="#" aria-label="Instagram">i</a>
         <a href="#" aria-label="Twitter">t</a>
-        <a href="#" aria-label="YouTube">y</a>
       </div>
     </div>
     <div class="footer-col">
@@ -752,13 +801,24 @@
     <div class="footer-col">
       <h4>Contato</h4>
       <ul>
-        <li>Email: contato@bloginformaja.com</li>
-        <li>Telefone: (11) 9999-8888</li>
-        <li>Endereço: Av. Paulista, 1000, São Paulo</li>
+        <li>contato@poploki.com</li>
+        <li>Av. Paulista, 1000, São Paulo</li>
       </ul>
     </div>
   </div>
-  <div class="copy">© 2023 Blog InformaJá — Todos os direitos reservados</div>
+</footer>
+
+<!-- Footer Personalizado (adicionei igual à página inicial) -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <div class="copyright">© Todos os Direitos Reservados</div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-title">Blog PopLoki </div>
+    </div>
+  </div>
+  <div class="footer-divider"></div>
 </footer>
 
 <script>
