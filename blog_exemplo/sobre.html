@@ -1,1 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Blog PopLoki</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+        }
 
+        body {
+            background: #f9f9f9;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #b215b2;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header .logo {
+            font-size: 22px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        header .logo a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            transition: opacity 0.3s;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .search {
+            margin-left: 20px;
+            position: relative;
+        }
+
+        .search input {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 20px;
+            width: 200px;
+            font-size: 14px;
+        }
+
+        .search button {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            height: 3px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .wrap {
+            max-width: 1080px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin: 30px 0;
+            color: #003322;
+            font-size: 32px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .page-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #003322;
+        }
+
+        .about-content {
+            background: #fff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .about-content h2 {
+            color: #003322;
+            margin: 30px 0 15px;
+            font-size: 24px;
+            border-left: 4px solid #003322;
+            padding-left: 10px;
+        }
+
+        .about-content h3 {
+            color: #003322;
+            margin: 25px 0 12px;
+            font-size: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .about-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .about-content li {
+            margin-bottom: 8px;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .category-card {
+            background: #eef8f5;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .category-card h4 {
+            color: #003322;
+            margin-bottom: 10px;
+        }
+
+        .about-content a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .about-content a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #B215B2;
+            color: #ccc;
+            padding: 40px 20px;
+            margin-top: 1px;
+        }
+
+        .footer-wrap {
+            max-width: 1080px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-logo img {
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 15px;
+            color: #fff;
+            font-size: 18px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #0066cc;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+
+        .social-icons a {
+            color: #444;
+            background: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #0066cc;
+        }
+
+        .copy {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 13px;
+            color: #aaa;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+        }
+
+        .site-footer {
+            background: #2C2C2C;
+            color: #ecf0f1;
+            padding: 8px 0;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .footer-left, .footer-right {
+            flex: 1;
+        }
+        
+        .footer-right {
+            text-align: right;
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+        
+        .copyright {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+        
+        .footer-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(236, 240, 241, 0.3), transparent);
+            margin: 15px 0;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 15px;
+            }
+            
+            .menu-toggle {
+                display: flex;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                margin-top: 10px;
+            }
+            
+            nav.active {
+                display: flex;
+            }
+            
+            .search {
+                margin-left: 0;
+                width: 100%;
+                margin-top: 10px;
+            }
+            
+            .search input {
+                width: 100%;
+            }
+            
+            .footer-wrap {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .page-title {
+                font-size: 26px;
+            }
+            
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .footer-right {
+                text-align: center;
+            }
+            
+            .about-content {
+                padding: 25px;
+            }
+            
+            .categories {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header .logo {
+                font-size: 18px;
+            }
+            
+            header .logo img {
+                height: 30px;
+            }
+            
+            .about-content {
+                padding: 20px;
+            }
+            
+            .about-content h2 {
+                font-size: 22px;
+            }
+            
+            .about-content h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="img/logo1.png" alt="Logo Blog PopLoki">
+            <a href="index.html">Blog</a>
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <nav id="main-nav">
+            <a href="index.html">Início</a>
+            <a href="index.html#curiosidades">Curiosidades</a>
+            <a href="index.html#curtas">Curtas</a>
+            <a href="index.html#filmes">Filmes</a>
+            <a href="index.html#series">Séries</a>
+            <div class="search">
+                <input type="text" placeholder="Pesquisar...">
+                <button>🔍</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <div class="wrap">
+        <h1 class="page-title">Sobre Nós</h1>
+        
+        <div class="about-content">
+            <p><strong>Bem-vindo ao Blog Poploki.</strong><br>
+            Este é um espaço dedicado a todos que amam o universo do cinema, das séries, dos curtas-metragens e das descobertas tecnológicas que tornam a experiência audiovisual ainda mais completa.</p>
+            
+            <p>Nosso objetivo vai além de simples recomendações. Aqui, você encontrará análises aprofundadas, curiosidades de bastidores, tendências e ferramentas que enriquecem o seu contato com o entretenimento.</p>
+            
+            <h2>Nossa Missão</h2>
+            <p>Na Poploki, acreditamos que boas histórias têm o poder de transformar. Elas emocionam, inspiram e podem até mudar a forma como vemos o mundo.</p>
+            
+            <p>Nossa missão é traduzir a magia das telas em conteúdo acessível, informativo e inspirador, unindo cinema, séries e tecnologia em uma experiência única para o leitor.</p>
+            
+            <p>Queremos ser o seu guia nesse universo: seja você um cinéfilo apaixonado, alguém curioso pelos bastidores da produção audiovisual ou um entusiasta em busca de aplicativos que otimizem a forma de consumir conteúdo.</p>
+            
+            <h2>O Que Você Vai Encontrar no Blog Poploki</h2>
+            <ul>
+                <li>Críticas e análises de filmes e séries – dos grandes lançamentos aos clássicos que marcaram época.</li>
+                <li>Curiosidades e bastidores – histórias e fatos pouco conhecidos que revelam novos olhares sobre as produções.</li>
+                <li>Listas e rankings – conteúdos que despertam nostalgia e apresentam novas descobertas.</li>
+                <li>Exploração de curtas-metragens – dando espaço para obras independentes e joias do cinema em formato reduzido.</li>
+                <li>Guias de aplicativos – dicas de ferramentas que ajudam a organizar, assistir e aproveitar melhor o conteúdo audiovisual.</li>
+                <li>Recomendações personalizadas – sugestões pensadas para diferentes perfis de público.</li>
+            </ul>
+            
+            <h2>Categorias do Blog Poploki</h2>
+            <div class="categories">
+                <div class="category-card">
+                    <div class="category-icon">🎬</div>
+                    <h4>Filmes</h4>
+                    <p>Críticas, análises e listas de produções renomadas ou pouco conhecidas.</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">📺</div>
+                    <h4>Séries</h4>
+                    <p>Novidades e destaques das principais plataformas de streaming.</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">🎞️</div>
+                    <h4>Curtas</h4>
+                    <p>Um olhar especial para histórias intensas contadas em poucos minutos.</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">📚</div>
+                    <h4>Curiosidades</h4>
+                    <p>Fatos de bastidores, segredos de produção e histórias marcantes.</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">📱</div>
+                    <h4>Aplicativos</h4>
+                    <p>Ferramentas digitais que facilitam a vida do apaixonado por cinema e séries.</p>
+                </div>
+            </div>
+            
+            <h2>Quem Faz o Poploki</h2>
+            <p>O Blog Poploki é produzido por uma equipe formada por cinéfilos, jornalistas culturais, roteiristas amadores e entusiastas de tecnologia. Vivemos intensamente o universo do entretenimento e buscamos compartilhar um olhar crítico, criativo e acessível.</p>
+            
+            <p>Nosso compromisso é oferecer conteúdo de qualidade, feito com pesquisa, paixão e respeito à inteligência e curiosidade dos nossos leitores.</p>
+            
+            <h2>Entre em Contato</h2>
+            <p>Quer enviar uma sugestão, fazer uma crítica construtiva ou indicar um curta que merece destaque?<br>
+            Sua participação é muito bem-vinda! A interação com nossos leitores é fundamental para tornar o Poploki um espaço cada vez mais rico e plural.</p>
+            
+            <h2>Agradecimento</h2>
+            <p>Obrigado por acompanhar o Blog Poploki. Continue explorando, se emocionando e descobrindo conosco.<br>
+            O mundo das telas está em constante transformação — e estamos aqui para compartilhar cada detalhe dessa jornada ao seu lado.</p>
+        </div>
+    </div>
+
+    <!-- Rodapé Principal -->
+    <footer>
+        <div class="footer-wrap">
+            <div>
+                <div class="footer-logo">
+                    <img src="img/logo2.png" alt="Logo Blog PopLoki">
+                </div>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Twitter">t</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#curiosidades">Curiosidades</a></li>
+                    <li><a href="index.html#curtas">Curtas</a></li>
+                    <li><a href="index.html#filmes">Filmes</a></li>
+                    <li><a href="index.html#series">Séries</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="termos.html">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <ul>
+                    <li>contato@poploki.com</li>
+                    <li>Av. Paulista, 1000, São Paulo</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer Personalizado -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="copyright">© Todos os Direitos Reservados</div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-title">Blog</div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script>
+        // Menu mobile toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mainNav = document.getElementById('main-nav');
+            
+            if (mobileMenu && mainNav) {
+                mobileMenu.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
